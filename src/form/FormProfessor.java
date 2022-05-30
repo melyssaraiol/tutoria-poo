@@ -47,10 +47,18 @@ public class FormProfessor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Formulário de Professores");
 
-        jLabel2.setText("Pesquisar Professor pelo ID:");
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel2.setText("ID do Professor:");
 
+        txtPesquisar.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtPesquisar.setForeground(new java.awt.Color(0, 102, 102));
+
+        btnPesquisar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(0, 102, 102));
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,12 +66,23 @@ public class FormProfessor extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
         jLabel3.setText("ID:");
 
+        txtId.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtId.setForeground(new java.awt.Color(0, 102, 102));
         txtId.setEnabled(false);
 
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 0, 51));
         jLabel4.setText("Nome do Professor:");
 
+        txtNomeProfessor.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomeProfessor.setForeground(new java.awt.Color(0, 102, 102));
+
+        btnCadastrar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(0, 102, 102));
         btnCadastrar.setText("Cadastrar Professor");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +90,8 @@ public class FormProfessor extends javax.swing.JFrame {
             }
         });
 
+        btnAtualizar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnAtualizar.setForeground(new java.awt.Color(0, 102, 102));
         btnAtualizar.setText("Atualizar");
         btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +99,8 @@ public class FormProfessor extends javax.swing.JFrame {
             }
         });
 
+        btnExcluir.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnExcluir.setForeground(new java.awt.Color(0, 102, 102));
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +108,8 @@ public class FormProfessor extends javax.swing.JFrame {
             }
         });
 
+        btnRelatorio.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnRelatorio.setForeground(new java.awt.Color(0, 102, 102));
         btnRelatorio.setText("Relatório de Professores");
         btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,29 +121,8 @@ public class FormProfessor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(38, 38, 38)
-                        .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(btnPesquisar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCadastrar)
                 .addGap(18, 18, 18)
                 .addComponent(btnAtualizar)
@@ -127,18 +131,40 @@ public class FormProfessor extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnRelatorio)
                 .addGap(52, 52, 52))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(btnPesquisar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPesquisar))
-                .addGap(18, 18, 18)
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -146,13 +172,13 @@ public class FormProfessor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtNomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrar)
                     .addComponent(btnAtualizar)
                     .addComponent(btnExcluir)
                     .addComponent(btnRelatorio))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -168,7 +194,7 @@ public class FormProfessor extends javax.swing.JFrame {
         professorDAO.cadastrarProfessor(professor);
         
         txtNomeProfessor.setText("");
-        JOptionPane.showMessageDialog(this, "Professor cadastrado.");
+        JOptionPane.showMessageDialog(this, "Cadastro realizado.");
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
@@ -182,7 +208,7 @@ public class FormProfessor extends javax.swing.JFrame {
         
         txtId.setText("");
         txtNomeProfessor.setText("");
-        JOptionPane.showMessageDialog(this, "Professor atualizado.");
+        JOptionPane.showMessageDialog(this, "Cadastro atualizado.");
     }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
@@ -190,7 +216,7 @@ public class FormProfessor extends javax.swing.JFrame {
         ProfessorDAO professorDAO = new ProfessorDAO();
         Professor professor = professorDAO.pesquisarProfessor(idPesquisa);
         if(professor == null){
-            JOptionPane.showMessageDialog(this, "Professor não encontrado.");
+            JOptionPane.showMessageDialog(this, "Cadastro não encontrado.");
         }
         else{
             txtId.setText(String.valueOf(professor.getId()));
@@ -206,7 +232,7 @@ public class FormProfessor extends javax.swing.JFrame {
         txtId.setText("");
         txtNomeProfessor.setText("");
         
-        JOptionPane.showMessageDialog(this, "Professor excluído.");
+        JOptionPane.showMessageDialog(this, "Cadastro excluído.");
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed

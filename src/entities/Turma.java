@@ -12,6 +12,7 @@ public class Turma {
     private int id;
     private String nometurma;
     private Professor prof_id;
+    private Aluno aluno_id;
    
 
     public int getId() {

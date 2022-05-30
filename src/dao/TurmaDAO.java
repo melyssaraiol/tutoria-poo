@@ -51,7 +51,9 @@ public class TurmaDAO {
         catch (Exception e) {
             System.out.println("Erro ao editar turma: " + e.getMessage());
         }
-    }
+        }
+
+
     
    
     public Turma pesquisarTurma(int id){
@@ -78,11 +80,13 @@ public class TurmaDAO {
     
     }
 
-    public List<Turma> pesquisarTurmas(){
+    public List<Turma> pesquisarTurmas(String nometurma){
         String sql  = "SELECT t.id, t.nometurma, t.prof_id, p.nomeprofessor FROM"
-                + " turma t INNER JOIN professor p ON t.prof_id = p.id;";
+                + " turma t INNER JOIN professor p ON t.prof_id = p.id WHERE t.nometurma LIKE ?;";
+        int cont = 0;
         try{
             PreparedStatement stmt = this.conn.prepareStatement(sql);
+            stmt.setString(1, "%" + nometurma + "%");
             ResultSet rs = stmt.executeQuery();
             List<Turma> lista = new ArrayList<>();
             while(rs.next()){

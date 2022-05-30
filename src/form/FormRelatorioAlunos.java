@@ -17,7 +17,8 @@ public class FormRelatorioAlunos extends javax.swing.JFrame {
 
     private void preencherTabela(){
         AlunoDAO alunoDAO = new AlunoDAO();
-        List<Aluno> listaAlunos = alunoDAO.pesquisarAlunos();
+        String nome = txtNomeAluno.getText();
+        List<Aluno> listaAlunos = alunoDAO.pesquisarAlunos(nome);
         
         DefaultTableModel tabelaAlunos = (DefaultTableModel) tblRelatorio.getModel();
         tabelaAlunos.setNumRows(0);
@@ -28,7 +29,8 @@ public class FormRelatorioAlunos extends javax.swing.JFrame {
                 a.getNome_mae(),
                 a.getNome_pai(),
                 a.getDt_nasc(),
-                a.getDt_cadastro()
+                a.getDt_cadastro(),
+                a.getTurma_id()
                 
             };
             tabelaAlunos.addRow(obj);
@@ -53,21 +55,38 @@ public class FormRelatorioAlunos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRelatorio = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        txtNomeAluno = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Relatório de Alunos");
 
+        tblRelatorio.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        tblRelatorio.setForeground(new java.awt.Color(0, 102, 102));
         tblRelatorio.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Nome do Aluno", "Nome da Mãe", "Nome do Pai", "Data de Nascimento", "Data de Cadastro"
+                "ID", "Nome do Aluno", "Nome da Mãe", "Nome do Pai", "Data de Nascimento", "Data de Cadastro", "Turma"
             }
         ));
         jScrollPane1.setViewportView(tblRelatorio);
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(251, 0, 51));
+        jLabel2.setText("Nome do Aluno:");
+
+        txtNomeAluno.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomeAluno.setForeground(new java.awt.Color(0, 102, 102));
+        txtNomeAluno.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtNomeAlunoCaretUpdate(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,16 +98,25 @@ public class FormRelatorioAlunos extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 699, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(jLabel1)))
+                        .addGap(235, 235, 235)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -96,6 +124,10 @@ public class FormRelatorioAlunos extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNomeAlunoCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtNomeAlunoCaretUpdate
+        preencherTabela();
+    }//GEN-LAST:event_txtNomeAlunoCaretUpdate
 
     /**
      * @param args the command line arguments
@@ -135,7 +167,9 @@ public class FormRelatorioAlunos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRelatorio;
+    private javax.swing.JTextField txtNomeAluno;
     // End of variables declaration//GEN-END:variables
 }

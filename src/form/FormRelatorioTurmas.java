@@ -15,8 +15,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FormRelatorioTurmas extends javax.swing.JFrame {
      private void preencheTabela() {
-            TurmaDAO turmaDAO = new TurmaDAO();    
-            List<Turma> listaTurmas = turmaDAO.pesquisarTurmas();
+            TurmaDAO turmaDAO = new TurmaDAO(); 
+            String nometurma = txtNomeTurma.getText();
+            List<Turma> listaTurmas = turmaDAO.pesquisarTurmas(nometurma);
             DefaultTableModel tabelaTurma = (DefaultTableModel) tblTurmas.getModel();
             tabelaTurma.setNumRows(0);
             for(Turma t: listaTurmas){
@@ -50,6 +51,8 @@ public class FormRelatorioTurmas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblTurmas = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        txtNomeTurma = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -66,6 +69,8 @@ public class FormRelatorioTurmas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Relatório de Turmas");
 
         tblTurmas.setModel(new javax.swing.table.DefaultTableModel(
@@ -78,6 +83,18 @@ public class FormRelatorioTurmas extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblTurmas);
 
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(251, 0, 51));
+        jLabel2.setText("Nome da Turma:");
+
+        txtNomeTurma.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomeTurma.setForeground(new java.awt.Color(0, 102, 102));
+        txtNomeTurma.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtNomeTurmaCaretUpdate(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,26 +102,39 @@ public class FormRelatorioTurmas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(206, 206, 206)
+                        .addGap(153, 153, 153)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel1)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNomeTurmaCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtNomeTurmaCaretUpdate
+        preencheTabela();
+    }//GEN-LAST:event_txtNomeTurmaCaretUpdate
 
     /**
      * @param args the command line arguments
@@ -143,9 +173,11 @@ public class FormRelatorioTurmas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable tblTurmas;
+    private javax.swing.JTextField txtNomeTurma;
     // End of variables declaration//GEN-END:variables
 }

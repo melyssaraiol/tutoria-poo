@@ -42,7 +42,7 @@ public class AlunoDAO {
        }
        
     }
-    
+        
     public Aluno pesquisaAluno(int id){
             try{
             PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM aluno WHERE id = ?",
@@ -77,7 +77,7 @@ public class AlunoDAO {
             try{
                 PreparedStatement stmt = this.conn.prepareStatement(sql);
                 stmt.setString(1, aluno.getNome());
-                stmt.setString(2, aluno.getNome_pai());
+                stmt.setString(2, aluno.getNome_mae());
                 stmt.setString(3, aluno.getNome_pai());
                 stmt.setString(4, aluno.getDt_nasc());
                 stmt.setString(5, aluno.getDt_cadastro());
@@ -102,10 +102,11 @@ public class AlunoDAO {
             }
         }
         
-        public List<Aluno> pesquisarAlunos(){
-            String sql = "SELECT * FROM aluno a JOIN turma ON a.turma_id = turma.id";
+        public List<Aluno> pesquisarAlunos(String nome){
+            String sql = "SELECT * FROM aluno a JOIN turma ON a.turma_id = turma.id WHERE a.nome LIKE ?";
             try{
                 PreparedStatement stmt = this.conn.prepareStatement(sql);
+                stmt.setString(1, "%" + nome + "%");
                 ResultSet rs = stmt.executeQuery();
                 List<Aluno> listaAlunos = new ArrayList<>();
                 while(rs.next()){

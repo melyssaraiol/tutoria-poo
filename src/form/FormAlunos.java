@@ -70,60 +70,122 @@ public class FormAlunos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Formulário de Alunos");
 
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(251, 0, 51));
         jLabel2.setText("Pesquisar ID do Aluno:");
 
+        txtIdPesquisa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtIdPesquisa.setForeground(new java.awt.Color(0, 102, 102));
+
+        btnPesquisar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(0, 102, 102));
         btnPesquisar.setText("Pesquisar");
+        btnPesquisar.setToolTipText("");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPesquisarActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(251, 0, 51));
         jLabel3.setText("ID:");
+        jLabel3.setToolTipText("");
 
+        txtId.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtId.setForeground(new java.awt.Color(0, 102, 102));
         txtId.setEnabled(false);
 
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(251, 0, 51));
         jLabel4.setText("Nome do Aluno:");
+        jLabel4.setToolTipText("");
 
+        txtNomeAluno.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomeAluno.setForeground(new java.awt.Color(0, 102, 102));
+
+        jLabel5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(251, 0, 51));
         jLabel5.setText("Nome da Mãe:");
+        jLabel5.setToolTipText("");
 
+        txtNomeMae.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomeMae.setForeground(new java.awt.Color(0, 102, 102));
+
+        jLabel6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(251, 0, 51));
         jLabel6.setText("Nome do Pai:");
+        jLabel6.setToolTipText("");
 
+        txtNomePai.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomePai.setForeground(new java.awt.Color(0, 102, 102));
+
+        jLabel7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(251, 0, 51));
         jLabel7.setText("Data de Nascimento:");
+        jLabel7.setToolTipText("");
 
+        txtDataNasc.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtDataNasc.setForeground(new java.awt.Color(0, 102, 102));
+
+        jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(251, 0, 51));
         jLabel8.setText("Data de Cadastro:");
+        jLabel8.setToolTipText("");
 
+        txtDataCadastro.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtDataCadastro.setForeground(new java.awt.Color(0, 102, 102));
+
+        btnCadastrar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(0, 102, 102));
         btnCadastrar.setText("Cadastrar");
+        btnCadastrar.setToolTipText("");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
             }
         });
 
+        btnRelatorio.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnRelatorio.setForeground(new java.awt.Color(0, 102, 102));
         btnRelatorio.setText("Relatório de Alunos");
+        btnRelatorio.setToolTipText("");
         btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRelatorioActionPerformed(evt);
             }
         });
 
+        btnAtualizar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnAtualizar.setForeground(new java.awt.Color(0, 102, 102));
         btnAtualizar.setText("Atualizar");
+        btnAtualizar.setToolTipText("");
         btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtualizarActionPerformed(evt);
             }
         });
 
+        btnDeletar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnDeletar.setForeground(new java.awt.Color(0, 102, 102));
         btnDeletar.setText("Deletar");
+        btnDeletar.setToolTipText("");
         btnDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeletarActionPerformed(evt);
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(251, 0, 51));
         jLabel9.setText("Turma:");
+        jLabel9.setToolTipText("");
+
+        cmbTurma.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        cmbTurma.setForeground(new java.awt.Color(0, 102, 102));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,7 +203,7 @@ public class FormAlunos extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNomeAluno)
                             .addComponent(txtNomeMae)
@@ -158,7 +220,7 @@ public class FormAlunos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnPesquisar)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,7 +281,7 @@ public class FormAlunos extends javax.swing.JFrame {
                     .addComponent(btnRelatorio)
                     .addComponent(btnAtualizar)
                     .addComponent(btnDeletar))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();

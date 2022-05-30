@@ -102,10 +102,19 @@ public class FormTurma extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Formulário de Turmas");
 
-        jLabel2.setText("Pesquisar Turma pelo ID:");
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(251, 0, 51));
+        jLabel2.setText("ID da Turma:");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        txtPesquisaTurma.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtPesquisaTurma.setForeground(new java.awt.Color(0, 102, 102));
+
+        btnPesquisar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(0, 102, 102));
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,16 +122,34 @@ public class FormTurma extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(251, 0, 51));
         jLabel3.setText("ID:");
 
+        txtId.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtId.setForeground(new java.awt.Color(0, 102, 102));
         txtId.setEnabled(false);
 
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(251, 0, 51));
         jLabel4.setText("Nome da Turma:");
 
+        txtNomeTurma.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        txtNomeTurma.setForeground(new java.awt.Color(0, 102, 102));
+
+        jLabel5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(251, 0, 51));
         jLabel5.setText("Professor:");
 
-        jLabel6.setText("Alunos:");
+        cmbProfessor.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        cmbProfessor.setForeground(new java.awt.Color(0, 102, 102));
 
+        jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel6.setText("Alunos");
+
+        btnCadastrar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(0, 102, 102));
         btnCadastrar.setText("Cadastrar Turma");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,6 +157,8 @@ public class FormTurma extends javax.swing.JFrame {
             }
         });
 
+        btnRelatorio.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        btnRelatorio.setForeground(new java.awt.Color(0, 102, 102));
         btnRelatorio.setText("Relatório de Turmas");
         btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +166,8 @@ public class FormTurma extends javax.swing.JFrame {
             }
         });
 
+        bntEditar.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        bntEditar.setForeground(new java.awt.Color(0, 102, 102));
         bntEditar.setText("Atualizar Turma");
         bntEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +175,8 @@ public class FormTurma extends javax.swing.JFrame {
             }
         });
 
+        tblAlunoTurma.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        tblAlunoTurma.setForeground(new java.awt.Color(0, 102, 102));
         tblAlunoTurma.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -162,76 +195,82 @@ public class FormTurma extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cmbProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(180, 180, 180)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
+                        .addGap(170, 170, 170)
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
+                        .addGap(8, 8, 8)
                         .addComponent(txtPesquisaTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(14, 14, 14)
                         .addComponent(btnPesquisar))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
-                        .addComponent(btnCadastrar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRelatorio)
-                        .addGap(18, 18, 18)
-                        .addComponent(bntEditar))
+                        .addGap(121, 121, 121)
+                        .addComponent(jLabel3)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel4)
+                        .addGap(0, 0, 0)
+                        .addComponent(txtNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel5)
+                        .addGap(4, 4, 4)
+                        .addComponent(cmbProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(258, 258, 258)
-                        .addComponent(jLabel1)))
-                .addContainerGap(104, Short.MAX_VALUE))
+                        .addGap(40, 40, 40)
+                        .addComponent(btnCadastrar)
+                        .addGap(25, 25, 25)
+                        .addComponent(btnRelatorio)
+                        .addGap(29, 29, 29)
+                        .addComponent(bntEditar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(jLabel6)))
+                .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(txtPesquisaTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisar))
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(txtNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(cmbProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel3))
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtPesquisaTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPesquisar))))
-                .addGap(18, 18, 18)
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel4))
+                    .addComponent(txtNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel5))
+                    .addComponent(cmbProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCadastrar)
                     .addComponent(btnRelatorio)
-                    .addComponent(bntEditar))
-                .addGap(36, 36, 36))
+                    .addComponent(bntEditar)))
         );
 
         pack();
@@ -245,7 +284,7 @@ public class FormTurma extends javax.swing.JFrame {
         Aluno aluno = new Aluno();
                        
         if(t == null){
-            JOptionPane.showMessageDialog(this, "Curso não encontrado");
+            JOptionPane.showMessageDialog(this, "Turma não encontrada.");
         }
         
         else {
@@ -273,7 +312,7 @@ public class FormTurma extends javax.swing.JFrame {
         
         txtNomeTurma.setText("");
         
-        JOptionPane.showMessageDialog(this, "Turma cadastrada!");
+        JOptionPane.showMessageDialog(this, "Cadastro realizado.");
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
@@ -285,18 +324,17 @@ public class FormTurma extends javax.swing.JFrame {
         int id = Integer.parseInt(txtPesquisaTurma.getText());
         String nomeTurma = txtNomeTurma.getText();
         Professor prof_id  = (Professor) cmbProfessor.getSelectedItem();
-        
+
         Turma turma = new Turma();
         turma.setId(id);
         turma.setNometurma(nomeTurma);
         turma.setProf_id(prof_id);
-               
-        
+
         TurmaDAO turmaDAO = new TurmaDAO();
         turmaDAO.editar(turma);
-        
+
         txtNomeTurma.setText("");
-        JOptionPane.showMessageDialog(this, "Turma atualizada.");
+        JOptionPane.showMessageDialog(this, "Cadastro atualizado.");
     }//GEN-LAST:event_bntEditarActionPerformed
 
     /**
